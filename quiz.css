@@ -78,6 +78,10 @@ h1 {
 }
 
 /* Geral */
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #2f3e42;
   font-family: 'PT Sans', sans-serif;
@@ -88,6 +92,13 @@ body {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Container */

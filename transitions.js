@@ -60,12 +60,12 @@
       }, 900);
     } else if (isMedium) {
       // Transição média para confessionário e info
-      document.body.style.transition = 'opacity 700ms ease-out';
+      document.body.style.transition = 'opacity 500ms ease-out';
       document.body.style.opacity = '0';
       
       setTimeout(function() {
         var overlay = document.createElement('div');
-        overlay.style.cssText = 'position: fixed; inset: 0; background: #374547; z-index: 9999; opacity: 0; transition: opacity 700ms ease-in-out;';
+        overlay.style.cssText = 'position: fixed; inset: 0; background: #374547; z-index: 9999; opacity: 0; transition: opacity 550ms ease-in-out;';
         document.body.appendChild(overlay);
         
         setTimeout(function() {
@@ -74,17 +74,17 @@
         
         setTimeout(function () {
           window.location.href = href;
-        }, 700);
-      }, 250);
+        }, 550);
+      }, 150);
     } else {
-      // Fade out do body atual (mais suave e lento para legado)
-      document.body.style.transition = 'opacity 1s ease-out';
+      // Fade out do body atual (suave para legado)
+      document.body.style.transition = 'opacity 750ms ease-out';
       document.body.style.opacity = '0';
       
       // Criar overlay de transição após body começar fade
       setTimeout(function() {
         var overlay = document.createElement('div');
-        overlay.style.cssText = 'position: fixed; inset: 0; background: #374547; z-index: 9999; opacity: 0; transition: opacity 1s ease-in-out;';
+        overlay.style.cssText = 'position: fixed; inset: 0; background: #374547; z-index: 9999; opacity: 0; transition: opacity 800ms ease-in-out;';
         document.body.appendChild(overlay);
         
         // Forçar reflow e animar
@@ -92,11 +92,11 @@
           overlay.style.opacity = '1';
         }, 10);
         
-        // Navegar após overlay estar totalmente visível
+        // Navegar após overlay estar visível
         setTimeout(function () {
           window.location.href = href;
-        }, 1000);
-      }, 400);
+        }, 800);
+      }, 300);
     }
   }
 
